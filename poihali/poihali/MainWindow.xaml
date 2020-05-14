@@ -1,0 +1,21 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:poihali"
+        xmlns:WindowsPresentation="clr-namespace:GMap.NET.WindowsPresentation;assembly=GMap.NET.WindowsPresentation" x:Class="poihali.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="655.761" Width="1079.565">
+    <Grid>
+
+        <WindowsPresentation:GMapControl Width="800" Height="600" Name="Map" Loaded="MapLoaded" HorizontalAlignment="Left" VerticalAlignment="Top" MouseDoubleClick="Map_MouseDoubleClick"/>
+        <ComboBox x:Name="objType" HorizontalAlignment="Left" Margin="833,33,0,0" VerticalAlignment="Top" Width="206" Height="41" SelectedIndex="0" FontSize="24">
+            <ListBoxItem Content="Car"/>
+            <ListBoxItem Content="Human"/>
+            <ListBoxItem Content="Destination"/>
+        </ComboBox>
+        <Button x:Name="Go" Content="Go" HorizontalAlignment="Left" Height="44" Margin="833,111,0,0" VerticalAlignment="Top" Width="206" Click="Go_Click" FontSize="24" />
+
+    </Grid>
+</Window>
