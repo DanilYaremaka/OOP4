@@ -145,7 +145,7 @@ namespace taxi
 
                         // установка угла поворота маркера
 
-                        if (Math.Abs(angle - cAngle) > 11) //|| (a - angle < 0))
+                        if (Math.Abs(angle - cAngle) > 7) //|| (a - angle < 0))
                         {
                             cAngle = angle;
                             carMarker.Shape.RenderTransform = new RotateTransform( angle,20,20 );
