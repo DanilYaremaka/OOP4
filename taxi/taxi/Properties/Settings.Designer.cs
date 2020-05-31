@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace poihali.Properties
+namespace taxi.Properties
 {
 
 

@@ -9,13 +9,13 @@ using System.Windows.Shapes;
 using System.Windows.Media;
 using System.Device.Location;
 
-namespace poihali
+namespace taxi
 {
-    public class Route : MapObject
+    public class Area : MapObject
     {
         private List<PointLatLng> points;
 
-        public Route(string title, List<PointLatLng> points) : base(title)
+        public Area(string title, List<PointLatLng> points) : base(title)
         {
             this.points = new List<PointLatLng>();
 
@@ -23,11 +23,6 @@ namespace poihali
             {
                 this.points.Add(p);
             }
-        }
-
-        public List<PointLatLng> getPoints()
-        {
-            return points;
         }
 
         public override double getDistance(PointLatLng point)
@@ -45,19 +40,17 @@ namespace poihali
 
         public override GMapMarker getMarker()
         {
-
-            GMapMarker Marker = new GMapRoute(points)
+            GMapMarker marker = new GMapPolygon(points)
             {
-                Shape = new Path()
+                Shape = new Path
                 {
-
-                    Stroke = Brushes.DarkBlue, // цвет обводки
-                    Fill = Brushes.DarkBlue, // цвет заливки
-                    StrokeThickness = 4 // толщина обводки
+                    Stroke = Brushes.Black, // стиль обводки
+                    Fill = Brushes.Violet, // стиль заливки
+                    Opacity = 0.7 // прозрачность
                 }
             };
 
-            return Marker;
+            return marker;
         }
     }
 }

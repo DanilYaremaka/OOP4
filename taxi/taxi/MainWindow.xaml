@@ -1,0 +1,30 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:taxi"
+        xmlns:WindowsPresentation="clr-namespace:GMap.NET.WindowsPresentation;assembly=GMap.NET.WindowsPresentation" x:Class="taxi.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="655.761" Width="1079.565">
+    <Grid Margin="0">
+        <WindowsPresentation:GMapControl Width="800" Height="600" Name="Map" Loaded="MapLoaded" HorizontalAlignment="Left" VerticalAlignment="Top"  MouseDoubleClick="Map_MouseDoubleClick"/>
+        <ComboBox x:Name="objType" HorizontalAlignment="Left" Margin="833,33,0,0" VerticalAlignment="Top" Width="206" Height="41" SelectedIndex="0" FontSize="24">
+            <ListBoxItem Content="Car"/>
+            <ListBoxItem Content="Human"/>
+            <ListBoxItem Content="Location"/>
+            <ListBoxItem Content="Area"/>
+        </ComboBox>
+        <TextBox x:Name="objTitle" HorizontalAlignment="Left" Height="37" Margin="833,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" FontSize="18"/>
+        <Label Content="Object_Title" HorizontalAlignment="Left" Margin="833,88,0,0" VerticalAlignment="Top" Width="128" Height="36" FontSize="20"/>
+        <Button x:Name="focus" Content="Focus" HorizontalAlignment="Left" Height="22" Margin="979,409,0,0" VerticalAlignment="Top" Width="60" Click="Button_Click_1" RenderTransformOrigin="0.222,0.456"/>
+        <ListBox x:Name="objectList" HorizontalAlignment="Left" Height="149" Margin="833,409,0,0" VerticalAlignment="Top" Width="128"/>
+        <Button x:Name="route" Content="Add Route" HorizontalAlignment="Left" Margin="833,186,0,0" VerticalAlignment="Top" Width="128" Height="41" Click="Button_Click_2"/>
+        <Label Content="Result" HorizontalAlignment="Left" Height="29" Margin="833,375,0,0" VerticalAlignment="Top" Width="70" FontSize="16"/>
+        <TextBox x:Name="searchTitle" HorizontalAlignment="Left" Height="40" Margin="833,279,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" FontSize="18"/>
+        <Label Content="Search by title" HorizontalAlignment="Left" Margin="833,242,0,0" VerticalAlignment="Top" Width="206" Height="32" FontSize="18"/>
+        <Button x:Name="find" Content="Find" HorizontalAlignment="Left" Margin="833,334,0,0" VerticalAlignment="Top" Width="60" Height="23" Click="Button_Click"/>
+        <CheckBox x:Name="searchDist" Content="Search by distance" HorizontalAlignment="Left" Height="21" Margin="916,339,0,0" VerticalAlignment="Top" Width="123"/>
+
+    </Grid>
+</Window>

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace poihali
+namespace Lab3
 {
     /// <summary>
     /// Логика взаимодействия для App.xaml

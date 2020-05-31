@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using GMap.NET;
 using GMap.NET.WindowsPresentation;
 
-namespace poihali
+namespace taxi
 {
     public abstract class MapObject
     {
